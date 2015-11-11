@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Algoritmos", "AlgVs2015.pyproj", "{CFD773DF-ADCC-4539-B012-A7B3FF92C318}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "AlgVs2015", "AlgVs2015.pyproj", "{CFD773DF-ADCC-4539-B012-A7B3FF92C318}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonApplication", "..\..\..\Visual Studio 2015\Projects\PythonApplication\PythonApplication\PythonApplication.pyproj", "{C0D0035A-BCD7-4785-B7F2-27DA4A314B83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CFD773DF-ADCC-4539-B012-A7B3FF92C318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CFD773DF-ADCC-4539-B012-A7B3FF92C318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D0035A-BCD7-4785-B7F2-27DA4A314B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D0035A-BCD7-4785-B7F2-27DA4A314B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
