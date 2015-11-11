@@ -1,0 +1,50 @@
+#Resolução do Exercicio para calcular expressões
+
+from aula04_stack import LinkedListStack
+from aula04_stack import * 
+from builtins import print
+
+#expressao = '( (10 / 5) * (4 - 2) )' 
+#expressao = '( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )' 
+#expressao = '( (1 - 2 + 1) * (2 - 1 - 1) * (2 - 4 + 2) )' 
+
+
+numeros = LinkedListStack() 
+operadores = LinkedListStack() 
+
+
+def operacao (x, y, operador):
+    if operador == '+': 
+      numeros.push(x+y) 
+    if operador == '-': 
+      numeros.push(x-y) 
+    if operador == '/': 
+      numeros.push(x/y) 
+    if operador == '*': 
+      numeros.push(x*y)
+
+def calculaExpressao(): 
+    expressao = '( (1 - 2 + 1) * (2 - 1 - 1) * (2 - 4 + 2) )' 
+    expressao = expressao.replace(" ", "") 
+    aux = '' 
+    for item in expressao: 
+        if (item.isdigit()): 
+            if (aux.isdigit()): 
+                numeros.push(numeros.pop() + item) 
+            else: 
+                numeros.push(item) 
+        elif (item == '('): 
+            operadores.push(item) 
+        elif (item == ')'): 
+            operador = operadores.pop() 
+            while (operador == '('): 
+                operador = operadores.pop() 
+            y = int(numeros.pop()) 
+            x = int(numeros.pop()) 
+            operacao(x,y, operador) 
+        else: 
+            operadores.push(item) 
+        aux = item 
+    print(numeros.pop())
+
+calculaExpressao()
